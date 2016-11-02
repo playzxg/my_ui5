@@ -1,0 +1,20 @@
+{
+	"welcomeFile": "/webapp/index.html",
+	"routes": [{
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/destinations/northwind",
+		"target": {
+			"type": "destination",
+			"name": "northwind"
+		},
+		"description": "Northwind OData Service"
+	}],
+	"sendWelcomeFileRedirect": true
+}

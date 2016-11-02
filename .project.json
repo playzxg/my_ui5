@@ -1,0 +1,42 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.sap.webide.hybrid.cordova"
+  ],
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Wed, 13 Jan 2016 12:56:36 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Wed, 13 Jan 2016 12:57:19 GMT"
+    },
+    {
+      "templateId": "wysiwygtemplate.quickStart",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Thu, 20 Oct 2016 14:29:03 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Thu, 20 Oct 2016 15:35:37 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,zh",
+    "defaultLanguage": "zh",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "mockpreview": {
+    "mockUri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+    "metadataFilePath": "",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false
+  }
+}
