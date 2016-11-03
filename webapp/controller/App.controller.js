@@ -3,9 +3,11 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 	return Controller.extend("my_ui5.controller.App", {
- 
- 
- 
+
+		onInit: function() {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		},
+
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -37,7 +39,7 @@ sap.ui.define([
 		//
 		//	}
 
-		onOpenDialog : function () {
+		onOpenDialog: function() {
 			this.getOwnerComponent().helloDialog.open(this.getView());
 		}
 	});

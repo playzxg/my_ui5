@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
-	"my_ui5/controller/HelloDialog"
-], function(UIComponent, JSONModel, HelloDialog) {
+	"my_ui5/controller/HelloDialog",
+	"sap/ui/Device"
+], function(UIComponent, JSONModel, HelloDialog, Device) {
 	"use strict";
 	return UIComponent.extend("my_ui5.Component", {
 		metadata: {
@@ -19,6 +20,10 @@ sap.ui.define([
 			};
 			var oModel = new JSONModel(oData);
 			this.setModel(oModel);
+			// set device model
+			var oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
 			// set dialog
 			this.helloDialog = new HelloDialog();
 			// create the views based on the url/hash
@@ -27,6 +32,16 @@ sap.ui.define([
 
 		exit: function() {
 			this.helloDialog.destroy();
+		},
+		getContentDensityClass : function() {
+			if (!this._sContentDensityClass) {
+				if (!sap.ui.Device.support.touch) {
+					this._sContentDensityClass = "sapUiSizeCompact";
+				} else {
+					this._sContentDensityClass = "sapUiSizeCozy";
+				}
+			}
+			return this._sContentDensityClass;
 		}
 	});
 });
